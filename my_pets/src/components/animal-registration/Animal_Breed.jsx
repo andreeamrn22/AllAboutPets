@@ -23,7 +23,6 @@ export const Animal_Breed = ({ pets, animalutSelectat, numeAnimalut }) => {
   const [selectedBreed, setSelectedBreed] = useState(null);
   const [open, setOpen] = useState(false);
   const [value, setValue] = useState("");
-  const test = "";
   const animalutSelectatObject = pets.find(
     (pet) => pet.name === animalutSelectat
   );
