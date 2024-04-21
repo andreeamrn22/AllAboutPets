@@ -16,17 +16,27 @@ import {
   CommandItem,
   CommandList,
 } from "../../lib/components/Command.tsx";
+import { animal } from "./animalute.ts";
 
-export const Animal_Breed = ({ pets, animalutSelectat, numeAnimalut }) => {
-  const [rasaAnimalut, setRasaAnimalut] = useState(null);
-  const [genderSelectat, setGenderSelectat] = useState(null);
-  const [selectedBreed, setSelectedBreed] = useState(null);
-  const [open, setOpen] = useState(false);
-  const [value, setValue] = useState("");
+interface gender {
+  name: string;
+  image?: string;
+}
+
+export const Animal_Breed: React.FC<{
+  pets: animal[];
+  animalutSelectat: string | null;
+  numeAnimalut: string | null;
+}> = ({ pets, animalutSelectat, numeAnimalut }) => {
+  const [rasaAnimalut, setRasaAnimalut] = useState<string | null>(null);
+  const [genderSelectat, setGenderSelectat] = useState<string | null>(null);
+  const [selectedBreed, setSelectedBreed] = useState<string | null>(null);
+  const [open, setOpen] = useState<boolean>(false);
+  const [value, setValue] = useState<string | null>("");
   const animalutSelectatObject = pets.find(
     (pet) => pet.name === animalutSelectat
   );
-  const genders = [
+  const genders: gender[] = [
     {
       name: "Mascul",
       image: gender_m,
@@ -40,11 +50,11 @@ export const Animal_Breed = ({ pets, animalutSelectat, numeAnimalut }) => {
     },
   ];
 
-  const handleGenderSelect = (genderName) => {
+  const handleGenderSelect = (genderName: string) => {
     setGenderSelectat(genderName);
   };
 
-  const handleRasaClick = (rasa) => {
+  const handleRasaClick = (rasa: string) => {
     setRasaAnimalut(rasa);
     setSelectedBreed(rasa);
     setOpen(false);

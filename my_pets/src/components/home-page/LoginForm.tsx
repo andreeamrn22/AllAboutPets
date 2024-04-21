@@ -3,7 +3,9 @@ import { motion, useAnimation } from "framer-motion";
 import fundal from "./img/cats-and-dogs.jpg";
 import purr from "./img/purr.png";
 
-export const LoginForm = ({ loginFormRef }) => {
+export const LoginForm: React.FC<{
+  loginFormRef: React.RefObject<HTMLDivElement>;
+}> = ({ loginFormRef }) => {
   const [rememberRegister, setRememberRegister] = useState(false);
   const [rememberLogin, setRememberLogin] = useState(false);
   const [currentState, setCurrentState] = useState("left");

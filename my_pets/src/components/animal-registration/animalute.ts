@@ -5,7 +5,13 @@ import parrotImage from "./img/c.parrot.png";
 import hamsterImage from "./img/c.hamster.png";
 import paw from "./img/paw.png";
 
-export const dogData = {
+export interface animal {
+  name: string;
+  rasa: string[];
+  image: string;
+}
+
+export const dogData: animal = {
   name: "Câine",
   rasa: [
     "Afghan Hound",
@@ -256,7 +262,7 @@ export const dogData = {
   image: dogImage,
 };
 
-export const catData = {
+export const catData: animal = {
   name: "Pisică",
   rasa: [
     "Abyssinian",
@@ -329,7 +335,7 @@ export const catData = {
   image: catImage,
 };
 
-export const rabbitData = {
+export const rabbitData: animal = {
   name: "Iepure",
   rasa: [
     "Altex",
@@ -397,7 +403,7 @@ export const rabbitData = {
   image: rabbitImage,
 };
 
-export const parrotData = {
+export const parrotData: animal = {
   name: "Papagal",
   rasa: [
     "African Grey",
@@ -424,7 +430,7 @@ export const parrotData = {
   image: parrotImage,
 };
 
-export const hamsterData = {
+export const hamsterData: animal = {
   name: "Hamster",
   rasa: [
     "Sirian",
@@ -436,13 +442,13 @@ export const hamsterData = {
   image: hamsterImage,
 };
 
-export const OtherData = {
+export const OtherData: animal = {
   name: "Alt animal",
   rasa: ["Altă rasă"],
   image: paw,
 };
 
-export const pets = [
+export const pets: animal[] = [
   dogData,
   catData,
   rabbitData,

@@ -57,11 +57,7 @@ export const PetReg = () => {
             </p>
             <div className="flex justify-center items-center w-full mt-10">
               <button className="flex items-center bg-orange-200 rounded-full px-6 py-3 hover:scale-110">
-                <p
-                  className="text-xl font-bold mr-2"
-                  Link
-                  to="/animal-registration"
-                >
+                <p className="text-xl font-bold mr-2">
                   <Link to="/animal-registration">
                     Înregistrează-ți animăluțul
                   </Link>

@@ -9,12 +9,16 @@ import { PetReg } from "./PetReg";
 import { Bottom } from "./Bottom";
 
 export const HomePage = () => {
-  const loginFormRef = useRef(null);
+  const loginFormRef = useRef<HTMLDivElement>(null);
   const [position, setPosition] = useState("left");
 
   const scrollSpreLogin = () => {
-    loginFormRef.current?.scrollIntoView({ behavior: "smooth" });
-    setPosition((prevPosition) => (prevPosition === "left" ? "right" : "left"));
+    if (loginFormRef.current) {
+      loginFormRef.current.scrollIntoView({ behavior: "smooth" });
+      setPosition((prevPosition) =>
+        prevPosition === "left" ? "right" : "left"
+      );
+    }
   };
 
   return (

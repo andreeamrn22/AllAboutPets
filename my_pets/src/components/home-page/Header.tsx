@@ -2,7 +2,9 @@ import React from "react";
 import logo from "./img/logo1.png";
 import { Link } from "react-router-dom";
 
-export const Header = ({ scrollSpreLogin }) => {
+export const Header: React.FC<{ scrollSpreLogin: Function }> = ({
+  scrollSpreLogin,
+}) => {
   const links = [
     { title: "Acasă", url: "#" },
     { title: "Înregistrează-ți animalul", url: "/animal-registration" },

@@ -59,7 +59,7 @@ export const Servicii = () => {
             key={index}
             className="flex flex-row items-start justify-start mb-8 relative mx-5 px-2 p-4 "
           >
-            <div style={boxStyle}></div>
+            <div className="bg-[#FFE4C4] h-full w-full absolute rounded-lg shadow-md"></div>
             <img
               src={service.image}
               alt={service.title}

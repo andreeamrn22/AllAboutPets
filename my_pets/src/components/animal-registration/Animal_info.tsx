@@ -1,16 +1,22 @@
 import React from "react";
+import { animal } from "./animalute";
 
-export const Animal_info = ({
+export const Animal_info: React.FC<{
+  pets: animal[];
+  numeAnimalut: string | null;
+  setNumeAnimalut: Function;
+  handleAnimalSelect: Function;
+  animalutSelectat: string | null; // numele animalutului selectat
+}> = ({
   pets,
   numeAnimalut,
   setNumeAnimalut,
   handleAnimalSelect,
   animalutSelectat,
 }) => {
-  const handleInputChange = (e) => {
+  const handleInputChange = (e: any) => {
     setNumeAnimalut(e.target.value);
   };
-
   return (
     <React.Fragment>
       <div className="bg-orange-200 h-screen w-full flex flex-col items-center justify-center menu ">
@@ -27,7 +33,6 @@ export const Animal_info = ({
               type="text"
               placeholder="Nume"
               className="w-full px-4 py-3 rounded-md mt-2 focus:outline-none"
-              value={numeAnimalut}
               onChange={handleInputChange}
             />
           </div>

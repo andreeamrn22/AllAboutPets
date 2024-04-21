@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import { Animal_info } from "./Animal_info";
 import { Animal_Breed } from "./Animal_Breed";
-import { pets } from "./animalute.js";
+import { pets } from "./animalute.ts";
 
 export const AnimalRegPage = () => {
-  const [numeAnimalut, setNumeAnimalut] = useState(null);
-  const [animalSelectat, setAnimalSelectat] = useState(null);
+  const [numeAnimalut, setNumeAnimalut] = useState<string | null>(null);
+  const [animalSelectat, setAnimalSelectat] = useState<string | null>(null);
 
-  const handleAnimalSelect = (petName) => {
+  const handleAnimalSelect = (petName: string) => {
     setAnimalSelectat(petName);
   };
 
