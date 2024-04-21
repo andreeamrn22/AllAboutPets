@@ -26,7 +26,7 @@ export const Animal_Breed = ({ pets, animalutSelectat, numeAnimalut }) => {
   const animalutSelectatObject = pets.find(
     (pet) => pet.name === animalutSelectat
   );
-
+  const test = "";
   const genders = [
     {
       name: "Mascul",
