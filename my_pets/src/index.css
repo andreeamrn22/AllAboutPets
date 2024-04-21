@@ -1,0 +1,37 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+@import url("https://fonts.googleapis.com/css2?family=KoHo:wght@500&display=swap");
+
+.menu {
+  font-family: "KoHo", sans-serif;
+}
+
+/*
+:root {
+  --primary-dark: #;
+  --primary-light: #;
+}
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply font-[Poppins];
+  }
+
+  li {
+    @apply p-4 text-sm;
+  }
+
+  button {
+    @apply px-4 py-2 border bg-gradient-to-r from-[var(--primary-dark)] to -[var(--primary-light)] text-white;
+  } 
+
+  h2 {
+    @apply text-xl font-bold;
+  }
+}
+*/
